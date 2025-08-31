@@ -100,7 +100,7 @@ const clientCalls = [
     duration: "1hr",
     date: "MON 3 AUG",
     rotation: "-10deg",
-    cardRotation: "3deg",
+    cardRotation: "-3deg",
   },
   {
     id: "10",
