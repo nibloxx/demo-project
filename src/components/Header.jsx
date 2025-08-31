@@ -12,7 +12,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      setIsScrolled(window.scrollY > 80)
     }
 
     if (isHomePage) {
@@ -25,10 +25,10 @@ export function Header() {
 
     fixed top-0 left-0 right-0 z-50 
     flex items-center justify-between p-6 
-    transition-all duration-300 ease-in-out
+    transition-all duration-500 ease-out
     ${isHomePage 
       ? isScrolled 
-        ? 'bg-white/90 backdrop-blur-md shadow-sm' 
+        ? 'bg-white/95 backdrop-blur-lg shadow-lg' 
         : 'bg-transparent'
       : 'bg-white shadow-sm border-b border-gray-100'
     }
@@ -44,10 +44,10 @@ export function Header() {
           <span className="text-xl font-bold text-gray-900">Funnelz</span>
         </div>
         <Button className={`
-          shadow hover:shadow-md px-4 py-6 rounded-xl flex items-center gap-3 border-none transition-all duration-300
+          shadow hover:shadow-lg px-4 py-6 rounded-xl flex items-center gap-3 border-none transition-all duration-500 ease-out
           ${isHomePage && !isScrolled 
-            ? 'bg-white/90 border border-white/20 hover:bg-white' 
-            : 'bg-white hover:bg-gray-50'
+            ? 'bg-white/90 border border-white/20 hover:bg-white hover:shadow-xl' 
+            : 'bg-white hover:bg-gray-50 hover:shadow-lg'
           }
         `}>
           <div className="w-6 h-6 rounded-full border border-gray-200 flex items-center justify-center">

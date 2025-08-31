@@ -49,13 +49,13 @@ export default function HomePage() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16">
             <AnimatedButton
-              className="px-6 py-3 text-sm font-medium rounded-lg shadow-lg w-full sm:w-auto"
+              className="px-5 py-2.5 text-sm font-medium rounded-lg shadow-lg w-full sm:w-auto"
             >
               Drive results now
             </AnimatedButton>
             <LearnMoreButton
               className="w-full sm:w-auto"
-              icon={<VideoIcon className="w-4 h-4" />}
+              icon={<VideoIcon className="w-3.5 h-3.5" />}
             >
               Learn more
             </LearnMoreButton>

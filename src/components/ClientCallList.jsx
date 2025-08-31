@@ -140,20 +140,54 @@ export function ClientCallList() {
 
     let scrollDirection = 1
     let scrollPosition = 0
+    let isPaused = false
+    let pauseStartTime = 0
     const scrollSpeed = 1.0
+    const pauseDuration = 1000 // 1 second in milliseconds
     const maxScroll = container.scrollHeight - container.clientHeight
 
     const scrollAnimation = () => {
+      const currentTime = Date.now()
+
+      // Check if we should pause
+      if (isPaused) {
+        if (currentTime - pauseStartTime >= pauseDuration) {
+          isPaused = false
+        } else {
+          requestAnimationFrame(scrollAnimation)
+          return
+        }
+      }
+
+      // Check if we reached the boundaries and should pause
+      if (scrollDirection === 1 && scrollPosition >= maxScroll) {
+        if (!isPaused) {
+          isPaused = true
+          pauseStartTime = currentTime
+        }
+        requestAnimationFrame(scrollAnimation)
+        return
+      } else if (scrollDirection === -1 && scrollPosition <= 0) {
+        if (!isPaused) {
+          isPaused = true
+          pauseStartTime = currentTime
+        }
+        requestAnimationFrame(scrollAnimation)
+        return
+      }
+
+      // Continue scrolling
       if (scrollDirection === 1) {
         scrollPosition += scrollSpeed
-        if (scrollPosition >= maxScroll) {
-          scrollDirection = -1
-        }
       } else {
         scrollPosition -= scrollSpeed
-        if (scrollPosition <= 0) {
-          scrollDirection = 1
-        }
+      }
+
+      // Change direction when reaching boundaries
+      if (scrollPosition >= maxScroll) {
+        scrollDirection = -1
+      } else if (scrollPosition <= 0) {
+        scrollDirection = 1
       }
 
       container.scrollTop = scrollPosition

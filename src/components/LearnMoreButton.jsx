@@ -9,8 +9,8 @@ export function LearnMoreButton({ children, className, onClick, icon: Icon }) {
   return (
     <button
       className={cn(
-        "relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-lg sm:rounded-xl border border-gray-200 transition-all duration-300 ease-out",
-        "text-gray-700 hover:text-[#ff4726] ",
+        "relative overflow-hidden px-5 py-2.5 text-sm font-medium rounded-lg border border-gray-200 transition-all duration-300 ease-out",
+        "text-gray-700 hover:text-[#ff4726] hover:border-[#ff4726]",
         className,
       )}
       onMouseEnter={() => setIsHovered(true)}
