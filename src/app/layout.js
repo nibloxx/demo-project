@@ -1,4 +1,3 @@
-import CustomCursor from "@/components/CustomCursor";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         
-        <CustomCursor />
+
         {children}
       </body>
     </html>

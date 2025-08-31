@@ -1,5 +1,7 @@
 import { ClientCallList } from "@/components/ClientCallList"
 import { Button } from "@/components/ui/button"
+import { AnimatedButton } from "@/components/AnimatedButton"
+import { LearnMoreButton } from "@/components/LearnMoreButton"
 import { Diamond, FramerIcon, TrendingUp, VideoIcon } from "lucide-react"
 
 export default function HomePage() {
@@ -46,20 +48,17 @@ export default function HomePage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16">
-            <Button
-              size="lg"
-              className="bg-gray-900 shadow-lg shadow-gray-400 hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-lg sm:rounded-xl shadow-lg w-full sm:w-auto"
+            <AnimatedButton
+              className="px-6 py-3 text-sm font-medium rounded-lg shadow-lg w-full sm:w-auto"
             >
               Drive results now
-            </Button>
-            <Button
-              variant="ghost"
-              size="lg"
-              className="text-gray-700 hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-lg sm:rounded-xl border border-gray-200 hover:bg-gray-50 w-full sm:w-auto"
+            </AnimatedButton>
+            <LearnMoreButton
+              className="w-full sm:w-auto"
+              icon={<VideoIcon className="w-4 h-4" />}
             >
-              <VideoIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Learn more
-            </Button>
+            </LearnMoreButton>
           </div>
 
           {/* Bottom Section */}
