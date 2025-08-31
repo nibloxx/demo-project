@@ -1,11 +1,12 @@
+"use client"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Card } from "@/components/ui/card"
+import { useEffect, useRef } from "react"
 
 const clientCalls = [
   {
     id: "1",
     clientName: "Sarah",
-    avatarUrl: "/professional-woman-dark-hair.png",
+    avatarUrl: "/image_1.jpg",
     startTime: "9:30 AM",
     endTime: "10:30 AM",
     duration: "1hr",
@@ -16,7 +17,7 @@ const clientCalls = [
   {
     id: "2",
     clientName: "Leah",
-    avatarUrl: "/professional-blonde-woman.png",
+    avatarUrl: "/image_2.jpg",
     startTime: "12:45 PM",
     endTime: "1:15 AM",
     duration: "30m",
@@ -27,7 +28,7 @@ const clientCalls = [
   {
     id: "3",
     clientName: "Joshua",
-    avatarUrl: "/professional-bearded-man.png",
+    avatarUrl: "/image_3.jpg",
     startTime: "9:30 AM",
     endTime: "10:30 AM",
     duration: "1hr",
@@ -38,7 +39,7 @@ const clientCalls = [
   {
     id: "4",
     clientName: "Edward",
-    avatarUrl: "/professional-man-suit.png",
+    avatarUrl: "/image_2.jpg",
     startTime: "9:30 AM",
     endTime: "10:30 AM",
     duration: "1hr",
@@ -49,11 +50,33 @@ const clientCalls = [
   {
     id: "5",
     clientName: "Mirielle",
-    avatarUrl: "/professional-curly-hair-woman.png",
+    avatarUrl: "/image_1.jpg",
     startTime: "9:30 AM",
     endTime: "10:30 AM",
     duration: "1hr",
     date: "THU 28 JUL",
+    rotation: "-10deg",
+    cardRotation: "3deg",
+  },
+  {
+    id: "6",
+    clientName: "Mirielle",
+    avatarUrl: "/image_3.jpg",
+    startTime: "9:30 AM",
+    endTime: "10:30 AM",
+    duration: "1hr",
+    date: "THU 28 JUL",
+    rotation: "-10deg",
+    cardRotation: "3deg",
+  },
+  {
+    id: "7",
+    clientName: "Mirielle",
+    avatarUrl: "/image_2.jpg",
+    startTime: "9:30 AM",
+    endTime: "10:30 AM",
+    duration: "1hr",
+    date: "MON 1 AUG",
     rotation: "-10deg",
     cardRotation: "3deg",
   },
@@ -76,14 +99,54 @@ function groupCallsByDate(calls) {
 
 export function ClientCallList() {
   const groupedCalls = groupCallsByDate(clientCalls)
+  const scrollContainerRef = useRef(null)
+
+  useEffect(() => {
+    const container = scrollContainerRef.current
+    if (!container) return
+
+    let scrollDirection = 1
+    let scrollPosition = 0
+    const scrollSpeed = 6.0
+    const maxScroll = container.scrollHeight - container.clientHeight
+
+    const scrollAnimation = () => {
+      if (scrollDirection === 1) {
+        scrollPosition += scrollSpeed
+        if (scrollPosition >= maxScroll) {
+          scrollDirection = -1
+        }
+      } else {
+        scrollPosition -= scrollSpeed
+        if (scrollPosition <= 0) {
+          scrollDirection = 1
+        }
+      }
+
+      container.scrollTop = scrollPosition
+      requestAnimationFrame(scrollAnimation)
+    }
+
+    const animationId = requestAnimationFrame(scrollAnimation)
+
+    return () => {
+      cancelAnimationFrame(animationId)
+    }
+  }, [])
 
   return (
-    <div className="max-w-full mx-auto min-h-screen" >
-      <div className="space-y-8">
-        {groupedCalls.map(([date, calls]) => (
-          <div key={date} className="space-y-4 bg-white border border-gray-100 rounded-xl shadow-sm"
-          style={{ transform: `rotate(${calls[0]?.cardRotation || '0deg'})` }}
-          >
+    <div className="max-w-full mx-auto min-h-screen overflow-hidden -mt-36 relative" ref={scrollContainerRef}>
+      {/* Top blur mask */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+      
+      {/* Bottom blur mask */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+      
+      <div className="space-y-8 animate-scroll">
+                 {groupedCalls.map(([date, calls]) => (
+           <div key={date} className="space-y-4 bg-white border border-gray-100 rounded-xl shadow-sm w-80"
+           style={{ transform: `rotate(${calls[0]?.cardRotation || '0deg'})` }}
+           >
             {/* Date Header */}
             <div className="flex items-center justify-between border-b border-gray-100 px-2 py-3">
               <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wide">{date.split(" ")[0]}</h2>

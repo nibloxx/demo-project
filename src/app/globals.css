@@ -183,3 +183,26 @@
   transition: opacity 0.2s ease-out;
   filter: blur(0.5px);
 }
+
+/* Auto-scrolling animation for ClientCallList */
+@keyframes autoScroll {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll {
+  animation: autoScroll 4s ease-in-out infinite;
+}

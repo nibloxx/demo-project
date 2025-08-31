@@ -46,7 +46,7 @@ export function Header() {
         <Button className={`
           shadow hover:shadow-md px-4 py-6 rounded-xl flex items-center gap-3 border-none transition-all duration-300
           ${isHomePage && !isScrolled 
-            ? 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20' 
+            ? 'bg-white/90 border border-white/20 hover:bg-white' 
             : 'bg-white hover:bg-gray-50'
           }
         `}>
