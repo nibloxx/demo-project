@@ -7,13 +7,17 @@ export default function HomePage() {
     <div className="min-h-screen font-open-runde">
      
 
-      <main className="flex flex-col lg:flex-row items-start justify-between p-3 sm:p-4 md:p-6 gap-4 sm:gap-6 lg:gap-8 my-6 sm:my-8 lg:my-10">
+      <main className="flex flex-col lg:flex-row items-start justify-between px-4 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:my-8 lg:my-10 border-b border-gray-200">
         {/* Left Column - Hero Section */}
         <div className="w-full lg:max-w-2xl lg:flex-1 order-2 lg:order-1">
           {/* Availability Badge */}
           <div className="flex justify-start mb-6 sm:mb-8">
             <div className="inline-flex items-center gap-2 text-green-500 bg-green-50 px-3 sm:px-4 py-2 rounded-full border border-green-500">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              
+              <div className="relative flex justify-center items-center">
+                <div className="w-4 h-4 bg-green-500/30 rounded-full animate-pulse"></div>
+                <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full m-auto"></div>
+              </div>
               <span className="text-xs font-bold">AVAILABLE FOR JUNE</span>
             </div>
           </div>
@@ -23,7 +27,7 @@ export default function HomePage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 leading-tight text-balance">
               Fuelling{" "}
               <span className="inline-flex items-center gap-1 sm:gap-2">
-                <span className="rotate-[15deg] bg-orange-500 shadow-lg shadow-orange-500 text-white p-2 sm:p-3 rounded-lg sm:rounded-xl inline-flex items-center justify-center">
+                <span className="animate-growth-rotation bg-[#ff4726] shadow-lg shadow-[#ff4726] text-white p-2 sm:p-3 rounded-lg sm:rounded-xl inline-flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8" />
                 </span>
                 growth
@@ -64,17 +68,17 @@ export default function HomePage() {
             <div>
               <p className="text-xs font-bold text-gray-400 mb-2 sm:mb-3">TRUSTED PARTNERS</p>
               <div className="flex items-center space-x-1">
-                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white flex items-center justify-center">
-                  <span className="text-white text-xs sm:text-sm font-semibold">A</span>
+                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shadow-md overflow-hidden">
+                  <img src="/image_1.jpg" alt="Partner 1" className="w-full h-full object-cover" />
                 </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-red-400 to-red-600 border-2 border-white flex items-center justify-center">
-                  <span className="text-white text-xs sm:text-sm font-semibold">B</span>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md overflow-hidden">
+                  <img src="/image_2.jpg" alt="Partner 2" className="w-full h-full object-cover" />
                 </div>
-                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white flex items-center justify-center">
-                  <span className="text-white text-xs sm:text-sm font-semibold">C</span>
+                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shadow-md overflow-hidden">
+                  <img src="/image_3.jpg" alt="Partner 3" className="w-full h-full object-cover" />
                 </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white flex items-center justify-center">
-                  <span className="text-white text-xs sm:text-sm font-semibold">D</span>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md overflow-hidden">
+                  <img src="/image_1.jpg" alt="Partner 4" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>

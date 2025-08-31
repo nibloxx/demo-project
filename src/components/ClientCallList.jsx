@@ -78,7 +78,40 @@ const clientCalls = [
     duration: "1hr",
     date: "MON 1 AUG",
     rotation: "-10deg",
+    cardRotation: "-3deg",
+  },
+  {
+    id: "8",
+    clientName: "Mirielle",
+    avatarUrl: "/image_3.jpg",
+    startTime: "9:30 AM",
+    endTime: "10:30 AM",
+    duration: "1hr",
+    date: "MON 2 AUG",
+    rotation: "-10deg",
     cardRotation: "3deg",
+  },
+  {
+    id: "9",
+    clientName: "Mirielle",
+    avatarUrl: "/image_2.jpg",
+    startTime: "9:30 AM",
+    endTime: "10:30 AM",
+    duration: "1hr",
+    date: "MON 3 AUG",
+    rotation: "-10deg",
+    cardRotation: "3deg",
+  },
+  {
+    id: "10",
+    clientName: "Mirielle",
+    avatarUrl: "/image_1.jpg",
+    startTime: "9:30 AM",
+    endTime: "10:30 AM",
+    duration: "1hr",
+    date: "MON 3 AUG",
+    rotation: "-10deg",
+    cardRotation: "-3deg",
   },
 ]
 
@@ -107,7 +140,7 @@ export function ClientCallList() {
 
     let scrollDirection = 1
     let scrollPosition = 0
-    const scrollSpeed = 6.0
+    const scrollSpeed = 1.0
     const maxScroll = container.scrollHeight - container.clientHeight
 
     const scrollAnimation = () => {
@@ -135,13 +168,8 @@ export function ClientCallList() {
   }, [])
 
   return (
-    <div className="max-w-full mx-auto min-h-screen overflow-hidden -mt-36 relative" ref={scrollContainerRef}>
-      {/* Top blur mask */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
-      
-      {/* Bottom blur mask */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
-      
+    <div className="max-w-full mx-auto min-h-screen overflow-hidden max-h-screen  -mt-36 relative" ref={scrollContainerRef}>
+
       <div className="space-y-8 animate-scroll">
                  {groupedCalls.map(([date, calls]) => (
            <div key={date} className="space-y-4 bg-white border border-gray-100 rounded-xl shadow-sm w-80"

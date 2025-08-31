@@ -55,10 +55,10 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		fontFamily: {
-  			'sans': ['Open Sans', 'system-ui', 'sans-serif'],
-  			'open-runde': ['Open Sans', 'system-ui', 'sans-serif']
-  		}
+  			fontFamily: {
+		'sans': ['Open Sans', 'system-ui', 'sans-serif'],
+		'open-runde': ['Open Runde', 'Open Sans', 'system-ui', 'sans-serif']
+	}
   	}
   },
   plugins: [require("tailwindcss-animate")],
