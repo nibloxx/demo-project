@@ -1,4 +1,5 @@
 /* Open Runde Font Family */
+
 @font-face {
   font-family: 'Open Runde';
   src: url('/font/OpenRunde-Regular-BF64ee9c627e5b6.otf') format('opentype'),
@@ -7,6 +8,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 
 @font-face {
   font-family: 'Open Runde';

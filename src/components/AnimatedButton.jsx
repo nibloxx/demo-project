@@ -15,7 +15,7 @@ export function AnimatedButton({ children, className, onClick, variant = "defaul
         "transform ",
         // Variant styles
         variant === "default" && [
-          "bg-black text-white",
+          "bg-[#1B1C1E] text-white",
           "hover:bg-[#ff4726] hover:text-white",
           "hover:shadow-lg hover:shadow-[#ff4726]/25",
         ],
@@ -37,7 +37,7 @@ export function AnimatedButton({ children, className, onClick, variant = "defaul
       <span className="relative block overflow-hidden">
         <span
           className={cn(
-            "block transition-all duration-300 ease-out text-center w-full",
+            "block transition-all font-open-runde duration-300 ease-out text-center w-full",
             isHovered ? "transform -translate-y-full opacity-0" : "transform translate-y-0 opacity-100",
           )}
         >
