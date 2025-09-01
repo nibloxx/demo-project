@@ -9,7 +9,7 @@ export function BookCallButton({ children, className, onClick, icon: Icon }) {
   return (
     <button
       className={cn(
-        "relative overflow-hidden px-5 py-2.5 text-[16px] font-semibold leading-[26px] font-open-runde rounded-lg border border-gray-200 transition-all duration-300 ease-out",
+        "relative overflow-hidden  py-2.5 text-[16px] font-semibold leading-[26px] font-open-runde rounded-lg transition-all duration-300 ease-out",
         "text-gray-700 hover:text-[#ff4726]",
         className
       )}
