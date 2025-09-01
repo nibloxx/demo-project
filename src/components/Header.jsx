@@ -23,7 +23,7 @@ export function Header() {
 
   const headerClasses = `
 
-    fixed top-0 left-0 right-0 z-50 
+    absolute top-0 left-0 right-0 z-50 
     flex items-center justify-between p-6 
     transition-all duration-500 ease-out
     ${isHomePage 
@@ -36,9 +36,9 @@ export function Header() {
 
   return (
     <header className={headerClasses}>
-      <div className="max-w-5xl mx-auto flex items-center justify-between w-full px-6">
+      <div className="max-w-6xl mx-auto flex items-center justify-between w-full px-12">
         <div className="flex items-center gap-2 ">
-          <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center shadow-lg">
             <Diamond className="w-4 h-4 text-white fill-white" />
           </div>
           <span className="text-xl font-bold text-gray-900">Funnelz</span>

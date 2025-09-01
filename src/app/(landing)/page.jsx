@@ -1,17 +1,17 @@
-import { ClientCallList } from "@/components/ClientCallList"
-import { Button } from "@/components/ui/button"
 import { AnimatedButton } from "@/components/AnimatedButton"
+import { ClientCallList } from "@/components/ClientCallList"
 import { LearnMoreButton } from "@/components/LearnMoreButton"
-import { Diamond, FramerIcon, TrendingUp, VideoIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { FramerIcon, TrendingUp, VideoIcon } from "lucide-react"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen font-open-runde">
+    <div className=" h-fit border-b border-gray-200">
      
 
-      <main className="flex flex-col lg:flex-row items-start justify-between px-4 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:my-8 lg:my-10 border-b border-gray-200">
+      <main className="flex flex-col lg:flex-row items-start justify-between px-12 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto border-l border-r border-dotted border-gray-300 pt-28 ">
         {/* Left Column - Hero Section */}
-        <div className="w-full lg:max-w-2xl lg:flex-1 order-2 lg:order-1">
+        <div className="w-full lg:max-w-2xl lg:flex-1 order-2 lg:order-1 pt-20">
           {/* Availability Badge */}
           <div className="flex justify-start mb-6 sm:mb-8">
             <div className="inline-flex items-center gap-2 text-green-500 bg-green-50 px-3 sm:px-4 py-2 rounded-full border border-green-500">
@@ -20,7 +20,7 @@ export default function HomePage() {
                 <div className="w-4 h-4 bg-green-500/30 rounded-full animate-pulse"></div>
                 <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full m-auto"></div>
               </div>
-              <span className="text-xs font-bold">AVAILABLE FOR JUNE</span>
+              <span className="text-[9px] font-extrabold">AVAILABLE FOR JUNE</span>
             </div>
           </div>
 

@@ -202,7 +202,7 @@ export function ClientCallList() {
   }, [])
 
   return (
-    <div className="max-w-full mx-auto min-h-screen overflow-hidden max-h-screen  -mt-36 relative" ref={scrollContainerRef}>
+    <div className="max-w-full mx-auto overflow-hidden max-h-[60vh] -mt-36 relative" ref={scrollContainerRef}>
 
       <div className="space-y-8 animate-scroll">
                  {groupedCalls.map(([date, calls]) => (
