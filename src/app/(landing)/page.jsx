@@ -1,5 +1,6 @@
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { ClientCallList } from "@/components/ClientCallList";
+import FramerTextSVG from "@/components/Icons/FramerTextSVG";
 import { LearnMoreButton } from "@/components/LearnMoreButton";
 import { Button } from "@/components/ui/button";
 import { FramerIcon, Play, PlaySquare, PlaySquareIcon, TrendingUp, VideoIcon } from "lucide-react";
@@ -125,13 +126,19 @@ export default function HomePage() {
         </div>
       </main>
 
-      <div className="fixed bottom-3 sm:bottom-6 right-3 sm:right-6 flex flex-col gap-2 sm:gap-3 z-50">
-        <Button className="bg-gray-800 font-open-runde hover:bg-gray-800 text-sm sm:text-md font-bold text-white px-3 sm:px-4 py-4 sm:py-6 rounded-lg sm:rounded-xl shadow-xl w-auto">
+      <div className="fixed bottom-3 sm:bottom-6 right-3 sm:right-6 flex flex-col gap-4 z-50">
+        <Button
+          className="bg-[#1c1c1c] text-[#f5f5f5] font-open-runde text-base font-semibold h-[49px]
+                    tracking-[-0.01em] leading-[1.6em] px-[20px] py-[12px] 
+                    rounded-[12px] shadow-fancy w-fit
+                    transition-all duration-300 ease-out
+                    hover:-translate-y-[4px] hover:bg-[#269AFF] hover:shadow-fancy-hover hover:opacity-100"
+        >
           Buy template
         </Button>
 
-        <Button className="bg-white hover:bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg w-auto">
-          <FramerIcon fill="black" className="w-4 h-4 sm:w-5 sm:h-5 mr-2 font-open-runde" /> Made in Framer
+        <Button className="bg-white hover:bg-white text-black rounded-[10px] shadow-framebtnShadow w-fit z-20 h-[36px] w-[142px]">
+          <FramerIcon fill="black" className="w-[11px] h-[16px] mr-1 font-open-runde" /><FramerTextSVG className="!w-[92px] !h-[11px] text-[#231f20]" />
         </Button>
       </div>
     </div>

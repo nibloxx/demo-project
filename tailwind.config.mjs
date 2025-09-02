@@ -70,6 +70,11 @@ export default {
         sans: ["Open Sans", "system-ui", "sans-serif"],
         "open-runde": ["Open Runde", "Open Sans", "system-ui", "sans-serif"],
       },
+       boxShadow: {
+        fancy: "inset 0 0 20px 1.64px rgba(255,255,255,0.15), 0 0.84px 0.5px -0.3px rgba(0,0,0,0.13), 0 1.99px 1.19px -0.62px rgba(0,0,0,0.13), 0 3.63px 2.17px -0.93px rgba(0,0,0,0.13), 0 6.03px 3.62px -1.25px rgba(0,0,0,0.13), 0 9.74px 5.84px -1.56px rgba(0,0,0,0.13), 0 15.95px 9.57px -1.87px rgba(0,0,0,0.13), 0 27.47px 16.48px -2.18px rgba(0,0,0,0.13), 0 50px 30px -2.5px rgba(0,0,0,0.13)",
+        'fancy-hover': `inset 0px 0px 20px 1.64px rgba(255, 255, 255, 0.4), 0px 0.839802px 0.503881px -0.3125px rgba(38, 154, 255, 0.13), 0px 1.99048px 1.19429px -0.625px rgba(38, 154, 255, 0.13), 0px 3.63084px 2.1785px -0.9375px rgba(38, 154, 255, 0.13), 0px 6.03627px 3.62176px -1.25px rgba(38, 154, 255, 0.13), 0px 9.74808px 5.84885px -1.5625px rgba(38, 154, 255, 0.13), 0px 15.9566px 9.57398px -1.875px rgba(38, 154, 255, 0.13), 0px 27.4762px 16.4857px -2.1875px rgba(38, 154, 255, 0.13), 0px 50px 30px -2.5px rgba(38, 154, 255, 0.13)`,
+        framebtnShadow: "rgba(0, 0, 0, 0.26) 0px 0.636953px 1.14652px -1.125px, rgba(0, 0, 0, 0.24) 0px 1.9316px 3.47689px -2.25px, rgba(0, 0, 0, 0.192) 0px 5.10612px 9.19102px -3.375px, rgba(0, 0, 0, 0.03) 0px 16px 28.8px -4.5px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
