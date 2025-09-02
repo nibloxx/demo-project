@@ -25,15 +25,15 @@ export function Header() {
 
   const headerClasses = `
 
-    absolute top-0 left-0 right-0 z-50 
+    top-0 left-0 right-0 z-50 
     flex items-center justify-between p-6 
     transition-all duration-500 ease-out
     ${
       isHomePage
         ? isScrolled
-          ? "bg-white/95 backdrop-blur-lg shadow-lg"
-          : "bg-transparent"
-        : "bg-white shadow-sm border-b border-gray-100"
+          ? "bg-[#f5f5f5] backdrop-blur-lg sticky"
+          : "bg-transparent absolute"
+        : "bg-white shadow-sm border-b border-gray-100 absolute"
     }
   `;
 
