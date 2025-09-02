@@ -183,7 +183,7 @@ export function ClientCallList() {
 
   return (
     <div
-      className="max-w-full mx-auto overflow-hidden max-h-[100vh] -mt-36 relative"
+      className="max-w-full mx-auto overflow-hidden -mt-36 relative"
       ref={scrollContainerRef}
     >
       <div className="space-y-8 animate-scroll">

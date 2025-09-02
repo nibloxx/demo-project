@@ -7,8 +7,8 @@ import { FramerIcon, Play, PlaySquare, PlaySquareIcon, TrendingUp, VideoIcon } f
 
 export default function HomePage() {
   return (
-    <div className=" h-fit border-b border-gray-200">
-      <main className="flex flex-col lg:flex-row items-start justify-between px-12 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto border-l border-r border-dotted border-gray-300 pt-24 ">
+    <div className=" h-fit border-b border-gray-200 overflow-hidden max-h-[740px] mb-2">
+      <main className="flex flex-col lg:flex-row items-start justify-between px-12 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto border-l border-r border-dotted border-gray-300 pt-24 pb-5">
         {/* Left Column - Hero Section */}
         <div className="w-full lg:max-w-2xl lg:flex-1 order-2 lg:order-1 pt-20">
           {/* Availability Badge */}
