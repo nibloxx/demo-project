@@ -122,7 +122,7 @@ export default function HomePage() {
 
         {/* Right Column - Client Call List */}
         <div className="hidden lg:block w-full lg:w-auto order-1 lg:order-2">
-          <ClientCallList />
+          <ClientCallList /> 
         </div>
         <div className="absolute bottom-[500px] right-12 z-[20] h-[76px] w-[391px] overflow-hidden flex-none bg-[#f5f5f5] mask-gradient-b right-"></div>
         <div className="absolute right-[0px] top-0 z-[1] h-[60px] w-[392px] overflow-hidden flex-none bg-[#f5f5f5] mask-gradient-t"></div>
