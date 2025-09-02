@@ -41,7 +41,7 @@ export function Header() {
     <header className={headerClasses}>
       <div className="max-w-6xl mx-auto flex items-center justify-between w-full px-12">
         <div className="flex items-center gap-2 ">
-          <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center shadow-lg">
+          <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center shadow-profile-glow">
             <Funnel className="w-4 h-4 text-white fill-white" />
           </div>
           <span className="text-xl font-bold font-open-runde text-gray-900">

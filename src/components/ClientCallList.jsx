@@ -213,7 +213,7 @@ export function ClientCallList() {
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <Avatar
-                      className="h-10 w-10 border-2 border-white shadow-sm"
+                      className="h-10 w-10 border-2 border-white shadow-profile-glow"
                       style={{ transform: `rotate(${call.rotation})` }}
                     >
                       <AvatarImage
