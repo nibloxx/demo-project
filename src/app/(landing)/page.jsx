@@ -1,11 +1,15 @@
+"use client";
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { ClientCallList } from "@/components/ClientCallList";
 import FramerTextSVG from "@/components/Icons/FramerTextSVG";
 import { LearnMoreButton } from "@/components/LearnMoreButton";
 import { Button } from "@/components/ui/button";
+import VideoDialog from "@/components/VideoDialog";
 import { FramerIcon, Play, PlaySquare, PlaySquareIcon, TrendingUp, VideoIcon } from "lucide-react";
+import { useState } from "react";
 
 export default function HomePage() {
+  const [open, setOpen] = useState(false)
   return (
     <div className=" h-fit border-b border-gray-200 overflow-hidden max-h-[740px] mb-2">
       <main className="relative flex flex-col lg:flex-row items-start justify-between px-12 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto border-l border-r border-dotted border-gray-300 pt-24 pb-5">
@@ -52,12 +56,13 @@ export default function HomePage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row font-open-runde gap-3 sm:gap-4 mb-12 sm:mb-16">
-            <AnimatedButton className="px-5 py-2.5 text-sm font-medium rounded-lg shadow-lg w-full sm:w-auto">
+            <AnimatedButton className="px-5 py-2.5 text-sm font-medium rounded-lg shadow-profile-glow hover:shadow-lg hover:shadow-[#ff4726] w-full sm:w-auto">
               Drive results now
             </AnimatedButton>
             <LearnMoreButton
               className="w-full  sm:w-auto"
               icon={<PlaySquare className="w-3.5 h-3.5" />}
+              onClick={() => setOpen(true)}
             >
               Learn more
             </LearnMoreButton>
@@ -71,28 +76,28 @@ export default function HomePage() {
                 TRUSTED PARTNERS
               </p>
               <div className="flex items-center space-x-1">
-                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shadow-md overflow-hidden">
+                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shadow-profile-glow overflow-hidden">
                   <img
                     src="/image_1.jpg"
                     alt="Partner 1"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md overflow-hidden">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-profile-glow overflow-hidden">
                   <img
                     src="/image_2.jpg"
                     alt="Partner 2"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shadow-md overflow-hidden">
+                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full shadow-profile-glow overflow-hidden">
                   <img
                     src="/image_3.jpg"
                     alt="Partner 3"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md overflow-hidden">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-profile-glow overflow-hidden">
                   <img
                     src="/image_1.jpg"
                     alt="Partner 4"
@@ -143,6 +148,8 @@ export default function HomePage() {
           <FramerIcon fill="black" className="w-[11px] h-[16px] mr-1 font-open-runde" /><FramerTextSVG className="!w-[92px] !h-[11px] text-[#231f20]" />
         </Button>
       </div>
+      {/* ✅ Video Dialog (controlled here) */}
+      <VideoDialog open={open} setOpen={setOpen} />
     </div>
   );
 }
