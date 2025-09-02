@@ -8,7 +8,7 @@ import { FramerIcon, Play, PlaySquare, PlaySquareIcon, TrendingUp, VideoIcon } f
 export default function HomePage() {
   return (
     <div className=" h-fit border-b border-gray-200 overflow-hidden max-h-[740px] mb-2">
-      <main className="flex flex-col lg:flex-row items-start justify-between px-12 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto border-l border-r border-dotted border-gray-300 pt-24 pb-5">
+      <main className="relative flex flex-col lg:flex-row items-start justify-between px-12 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto border-l border-r border-dotted border-gray-300 pt-24 pb-5">
         {/* Left Column - Hero Section */}
         <div className="w-full lg:max-w-2xl lg:flex-1 order-2 lg:order-1 pt-20">
           {/* Availability Badge */}
@@ -124,6 +124,8 @@ export default function HomePage() {
         <div className="hidden lg:block w-full lg:w-auto order-1 lg:order-2">
           <ClientCallList />
         </div>
+        <div className="absolute bottom-[500px] right-12 z-[20] h-[76px] w-[391px] overflow-hidden flex-none bg-[#f5f5f5] mask-gradient-b right-"></div>
+        <div className="absolute right-[0px] top-0 z-[1] h-[60px] w-[392px] overflow-hidden flex-none bg-[#f5f5f5] mask-gradient-t"></div>
       </main>
 
       <div className="fixed bottom-3 sm:bottom-6 right-3 sm:right-6 flex flex-col gap-4 z-50">

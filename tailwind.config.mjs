@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
 export default {
   darkMode: ["class"],
   content: [
@@ -77,5 +78,24 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".mask-gradient-b": {
+          "-webkit-mask":
+            "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%) add",
+          "mask":
+            "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%) add",
+        },
+        /* top overlay mask */
+        ".mask-gradient-t": {
+          "-webkit-mask":
+            "linear-gradient(180deg, rgba(0,0,0,1) 11%,  rgba(0,0,0,0) 100%) add",
+          "mask":
+            "linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(0,0,0,0) 100%) add",
+        },
+      });
+    }),
+  ],
 };
