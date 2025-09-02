@@ -123,7 +123,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
 
         {/* Right Column - Client Call List */}
         <div className="hidden lg:block w-full lg:w-auto order-1 lg:order-2">
